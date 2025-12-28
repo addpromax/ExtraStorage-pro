@@ -5,6 +5,7 @@ api-version: 1.16
 folia-supported: true
 authors: [ HSGamer, HyronicTeam ]
 softdepend:
+  - AxSellwands
   - HeadDatabase
   - Vault
   - PlaceholderAPI

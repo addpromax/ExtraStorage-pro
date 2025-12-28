@@ -26,6 +26,9 @@ out/
 *.tar.gz
 *.rar
 
+# 但是保留 libs 目录中的依赖 jar 文件
+!libs/*.jar
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
@@ -111,3 +114,6 @@ buildNumber.properties
 
 # Common working directory
 run/
+
+参考代码/
+libs/

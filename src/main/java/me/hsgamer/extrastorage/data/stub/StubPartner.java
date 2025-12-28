@@ -7,6 +7,7 @@ import org.bukkit.OfflinePlayer;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.UUID;
 
 public class StubPartner implements Partner {
@@ -30,7 +31,7 @@ public class StubPartner implements Partner {
 
     @Override
     public String getTimeFormatted() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(ExtraStorage.getInstance().getSetting().getDateFormat());
+        SimpleDateFormat dateFormat = new SimpleDateFormat(ExtraStorage.getInstance().getSetting().getDateFormat(), Locale.ENGLISH);
         return dateFormat.format(new Date(timestamp));
     }
 }

@@ -117,6 +117,10 @@
 			<url>https://jitpack.io</url>
 		</repository>
 		<repository>
+			<id>Artillex-Studios</id>
+			<url>https://repo.artillex-studios.com/releases/</url>
+		</repository>
+		<repository>
 			<id>techscode</id>
 			<url>https://repo.techscode.com/repository/techscode-apis/</url>
 		</repository>
@@ -341,8 +345,25 @@
 		</dependency>
 		<dependency>
 			<groupId>io.github.projectunified</groupId>
+			<artifactId>craftitem-core</artifactId>
+			<version>${craftitem.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.projectunified</groupId>
+			<artifactId>craftitem-spigot-core</artifactId>
+			<version>${craftitem.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.projectunified</groupId>
 			<artifactId>craftitem-spigot-skull</artifactId>
 			<version>${craftitem.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.artillexstudios</groupId>
+			<artifactId>AxSellwands</artifactId>
+			<version>1.21.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/AxSellwands-1.12.0.jar</systemPath>
 		</dependency>
 	</dependencies>
 	

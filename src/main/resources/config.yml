@@ -41,9 +41,11 @@ Log:
 
 #The economy provider that used for selling the item:
 Economy:
-  # * Available: Vault, PlayerPoints, TokenManager, UltraEconomy, CoinsEngine.
+  # * Available: Vault, PlayerPoints, TokenManager, UltraEconomy, CoinsEngine, AxSellwands.
   #You can also use one of these marketplaces: ShopGUIPlus and EconomyShopGUI (free or paid version). It will override
   #the default price listed in worth.yml, so you don't need to configure that file.
+  # * AxSellwands: Use AxSellwands API to sell items. This will use the price configuration from AxSellwands plugin.
+  #   Make sure you have AxSellwands installed and configured properly before using this option.
   Provider: 'Vault'
   #Additionally, when using UltraEconomy or CoinsEngine you may use a different currency, use this option to select
   #your currency:

@@ -68,6 +68,9 @@ public final class Setting
 
         String economyProvider = config.getString("Economy.Provider", "VAULT").toUpperCase();
         switch (economyProvider) {
+            case "AXSELLWANDS":
+                this.economyProvider = new AxSellwandsHook();
+                break;
             case "SHOPGUIPLUS":
                 this.economyProvider = new ShopGuiPlusHook();
                 break;

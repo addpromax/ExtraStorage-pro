@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 import java.util.TimeZone;
 
 public final class Log {
@@ -32,7 +33,7 @@ public final class Log {
         if ((!setting.isLogTransfer()) && (!setting.isLogWithdraw()) && (!setting.isLogSales())) return false;
 
         this.cal = Calendar.getInstance(TimeZone.getDefault());
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         this.logFile = new File(logFolder, dateFormat.format(cal.getTime()) + ".txt");
 
         try {
@@ -49,7 +50,7 @@ public final class Log {
 
         try {
             FileWriter writer = new FileWriter(logFile, true);
-            SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss", Locale.ENGLISH);
             String text, time = timeFormat.format(cal.getTime()), itemName = setting.getNameFormatted(key, true);
             switch (action) {
                 case SELL:
